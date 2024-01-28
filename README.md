@@ -1,2 +1,2 @@
 # TodoListApp_Servlets
-Todo List Application (CRUD) using JSP, Servlets, JDBC and MYSQL.
+Todo List Application (CRUD operations) using JSP, Servlets, JDBC, and MYSQL.
