@@ -4,19 +4,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TODO List Application</title>
+    <link rel="stylesheet" type="text/css" href="List.css">
+    <title>Todo List Application</title>
 </head>
 <body>
-    <center>
-        <h1>TODO List Application</h1>
-        <form action="new" method="post">
-        	<input type="submit" value="Add New Task" />
-        </form>
-        <br>
-        <form action="list" method="post">
-        	<input type="submit" value="List All Tasks " />
-        </form>     
-    </center>
+    <header>
+        <nav>
+        	<a class="logo">TODO LIST</a>
+            <a class = "NewTask" href="new">Add New Task</a>
+            <a class = "ListTask" href="list">List All Tasks</a>
+        </nav>
+    </header>
     <div align="center">
         <table border="1" cellpadding="5">
             <caption><h2>List of Todo Tasks</h2></caption>
@@ -33,13 +31,15 @@
                     <td><c:out value="${TodoList.title}" /></td>
                     <td><c:out value="${TodoList.targetDate}" /></td>
                     <td><c:out value="${TodoList.status}" /></td>
-                    <td>                      
-                        <form action="edit?id=<c:out value='${TodoList.id}' />" method="post">
-        					<input type="submit" value="Edit"/>
-        				</form>
-        				<form action="delete?id=<c:out value='${TodoList.id}' />" method="post">
-        					<input type="submit" value="Delete" />
-        				</form>                                   
+                    <td class = "actions"> 
+                    	<div>
+                    		<form class="inline" id = "Edit" action="edit?id=<c:out value='${TodoList.id}' />" method="post">
+                            	<input type="submit" value="Edit"/>
+                        	</form>
+                        	<form class="inline" id ="Delete" action="delete?id=<c:out value='${TodoList.id}' />" method="post">
+                            	<input type="submit" value="Delete" />
+                        	</form>
+                    	</div>                                                        
                     </td>
                 </tr>
             </c:forEach>

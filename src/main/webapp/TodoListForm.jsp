@@ -4,18 +4,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TODO List Application</title>
+	<link rel="stylesheet" type="text/css" href="Form.css">
+    <title>Todo List Application</title>
 </head>
 <body>
-    <center>
-        <h1>TODO List</h1>
-        <form action="new" method="post">
-        	<input type="submit" value="Add New Task" />
-        </form>
-        <form action="list" method="post">
-        	<input type="submit" value="List All Tasks" />
-        </form>    
-    </center>
+    <header>
+        <nav>
+        	<a class="logo">TODO LIST</a>
+            <a class = "NewTask" href="new">Add New Task</a>
+            <a class = "ListTask" href="list">List All Tasks</a>
+        </nav>
+    </header>
+    
     <div align="center">
         <c:if test="${TodoList != null}">
             <form action="update" method="post">
@@ -54,7 +54,7 @@
                 </td>
             </tr>
             <tr>
-                <th>Status</th>
+                <th>Status:</th>
                 <td>
                     <input type="text" name="status" size="5"
                             value="<c:out value='${TodoList.status}' />"

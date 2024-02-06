@@ -1,0 +1,72 @@
+/* TodoListForm.css */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+center {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: 0 auto;
+}
+
+th, td {
+    padding: 10px;
+}
+
+th {
+    text-align: left;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+nav {
+    text-align: left;
+    padding-left: 20px;
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px; /* Change font size as desired */
+}
+
+nav a.NewTask:hover{
+	background-color: #808080;
+}
+
+nav a.ListTask:hover{
+	background-color: #808080;
+}
+
+nav a.logo {
+    font-size: 24px; /* Change font size as desired */
+    font-weight: bold; /* Change font weight as desired */
+}
+
+input[type="submit"] {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049; /* Darker green */
+}
